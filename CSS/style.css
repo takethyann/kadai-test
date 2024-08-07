@@ -1,7 +1,3 @@
-body {
-    width: 100%;
-}
-
 .wrapper {
     width: 400px;
     margin: 0 auto;
@@ -23,30 +19,17 @@ body {
     margin-right: 20px;
     border: 10px solid;
     border-color: white;
-    
+    background: white;
 }
 
-.li1 {
+.flex-list div {
     background: #6729a0;
     width: 40px;
     height: 40px;
 }
 
-.li2 {
-    width: 40px;
-    height: 40px;
-    background: #6729a0;
-    border-left: 10px solid;
-    border-color: white;
-    border-right: 10px solid;
-    border-color: white;
-}
-
-
-.li3 {
-    width: 40px;
-    height: 40px;
-    background: #6729a0;
+.flex-list div + div {
+    margin-left: 10px;
 }
 
 .content {
@@ -57,48 +40,31 @@ body {
 }
 
 .side {
-    float: right;
+    display: flex;
+    flex-direction: column;
     width: 250px;
     height: 250px;
     background: #2563eb;
 }
 
-.item1{
-    width: 140px;
-    height: 40px;
-    background:  #ff863f;
-    margin: 40px 0 0 40px;
-    border: 5px solid;
-    border-color: white;
-    
-    
-}
-
-
-.item2{
+.side div {
+    display: block;
     width: 140px;
     height: 40px;
     background: #ff863f;
-    margin-left: 40px;
-    margin-top: 10px;
     border: 5px solid;
     border-color: white;
-}
-
-.item3{
-    width: 140px;
-    height: 40px;
-    background: #ff863f;
+    margin-top: 40px;
     margin-left: 40px;
-    margin-top: 10px;
-    border: 5px solid;
-    border-color: white;
 }
 
+.side div + div {
+    margin-top: 10px;
+}
 
 .footer {
     width: 400px;
     height: 100px;
     background: #fd0;
-    float: left;
+    display: flex;
 }
