@@ -10,12 +10,13 @@
 }
 
 .header-list {
-    float: right;
-    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .flex-list {
     display: flex;
+    margin-top: 20px;
     margin-right: 20px;
     border: 10px solid;
     border-color: white;
@@ -28,12 +29,16 @@
     height: 40px;
 }
 
-.flex-list div + div {
+.li {
     margin-left: 10px;
 }
 
+.li:first-child {
+    margin-left: 0;
+}
+
 .content {
-    float: left;
+    position: absolute;
     width: 150px;
     height: 250px;
     background: #0a5;
@@ -41,6 +46,8 @@
 
 .side {
     display: flex;
+    gap: 0;
+    margin: 0 0 0 auto;
     flex-direction: column;
     width: 250px;
     height: 250px;
@@ -48,23 +55,21 @@
 }
 
 .side div {
-    display: block;
     width: 140px;
     height: 40px;
     background: #ff863f;
     border: 5px solid;
     border-color: white;
-    margin-top: 40px;
+    margin: 5px;
     margin-left: 40px;
 }
 
-.side div + div {
-    margin-top: 10px;
+.item:first-child {
+    margin-top: 40px;
 }
 
 .footer {
     width: 400px;
     height: 100px;
     background: #fd0;
-    display: flex;
 }
